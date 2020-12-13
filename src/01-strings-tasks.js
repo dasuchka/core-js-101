@@ -138,7 +138,7 @@ function repeatString(value, count) {
     throw new Error('Not implemented');
   }
   let string = '';
-  for (let i = 1; i <= count; i++) {
+  for (let i = 1; i <= count; i += 1) {
     string += value;
   }
   return string;
