@@ -114,10 +114,10 @@ function removeLeadingAndTrailingWhitespaces(value) {
   if (value === undefined) {
     throw new Error('Not implemented');
   }
-  let newString = value;
+  const newString = value;
   const matches = value.match(/[\S]/g);
   const firstIndex = newString.indexOf(matches[0]);
-  //newString = newString.substring(firstIndex);
+  // newString = newString.substring(firstIndex);
   const lastIndex = newString.lastIndexOf(matches[matches.length - 1]);
   return newString.substring(firstIndex, lastIndex + 1);
 }
@@ -139,7 +139,7 @@ function repeatString(value, count) {
   }
   let string = '';
   for (let i = 1; i <= count; i++) {
-    string = string + value;
+    string += value;
   }
   return string;
 }
@@ -286,7 +286,7 @@ function isString(value) {
   if (value === undefined) {
     throw new Error('Not implemented');
   }
-  return typeof(value) === 'string' ? true : false;
+  return typeof (value) === 'string';
 }
 
 
@@ -319,9 +319,9 @@ function getCardId(value) {
     throw new Error('Not implemented');
   }
   const cardDesk = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
-      'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
-      'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
-     'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
+    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
   return cardDesk.indexOf(value);
 }
 
